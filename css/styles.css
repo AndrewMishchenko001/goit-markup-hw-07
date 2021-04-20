@@ -32,22 +32,11 @@ body {
   margin: 0px;
 }
 
-/* img {
-  display: block; ----Репета на видео показывал что можно делать так в ДЗ))
-  max-width: 100%;
-} */
-/* можно еще создать в body {font size14px} */
-.link-line {
-  text-decoration: none;
-}
+/* блок утилита */
 .list {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.list a {
-  text-decoration: none;
 }
 
 .page-header {
@@ -64,11 +53,10 @@ body {
   margin-right: auto;
 }
 
-/* Main */
-.page-header > .container {
+.container--flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /* Main-nav */
@@ -76,6 +64,7 @@ body {
 .main-nav {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 /* logo */
 .logo {
@@ -85,25 +74,39 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.17;
+  text-decoration: none;
 }
-.logo-blue {
+
+.page-header__logo {
+  margin-right: 43px;
+}
+.logo__text {
   color: var(--accent-color);
 }
 
-/* site nav */
-.site-nav {
+/* main-nav */
+
+.main-nav__list {
   display: flex;
-  margin-left: 93px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.site-nav .item + .item {
+.main-nav__item {
   margin-left: 50px;
 }
+.main-nav__item:first-child {
+  margin-left: 0;
+}
 
-.site-nav .link {
+.main-nav__link,
+.contacts__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  text-decoration: none;
 
   color: var(--title-text-color);
   font-family: Roboto, sans-serif;
@@ -114,17 +117,17 @@ body {
   transition: color var(--timing-process) var(--timing-function);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.main-nav__link:hover,
+.main-nav__link:focus {
   color: var(--accent-color);
 }
-.site-nav .link.current {
+.main-nav__link--current {
   color: var(--accent-color);
 }
-.current {
+.main-nav__link--current {
   position: relative;
 }
-.current::after {
+.main-nav__link--current::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -140,36 +143,30 @@ body {
 }
 /* auth-nav */
 
-.auth-nav {
+.contacts {
   display: flex;
   margin-left: auto;
   align-items: center;
 }
 
-.auth-nav .item + .item {
-  margin-left: 50px;
+.contacts__item:not(:last-child) {
+  margin-right: 30px;
 }
-.auth-item {
+.contacts__icon {
   margin-right: 10px;
 }
 
-.auth-nav .link {
+.contacts__link {
   display: flex;
   align-items: center;
+  text-decoration: none;
 
   fill: currentColor;
-
   color: var(--primary-text-color);
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  transition: color var(--timing-process) var(--timing-function);
 }
 
-.auth-nav .link:hover,
-.auth-nav .link:focus {
+.contacts__link:hover,
+.contacts__link:focus {
   color: var(--accent-color);
 }
 
