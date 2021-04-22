@@ -247,10 +247,6 @@ body {
     opacity var(--timing-process) var(--timing-function);
   opacity: 1;
 }
-.form-subcribe {
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .modal--container {
   display: block;
@@ -426,17 +422,18 @@ body {
 }
 
 /* features-list */
-.feature-list {
+.features-list {
   display: flex;
+  margin-bottom: 94px;
 }
 
-.feature-list .item {
+.features-list__item {
   width: 270px;
 }
-.feature-list .item + .item {
+.features-list__item + .features-list__item {
   margin-left: 30px;
 }
-.features-title {
+.features-list__title {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -447,7 +444,7 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
 }
-.features-text {
+.features-list__text {
   margin-top: 0;
   margin-bottom: 0px;
 
@@ -455,7 +452,7 @@ body {
   font-size: 14px;
   line-height: 1.71;
 }
-.feature-container {
+.feature-list__container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -476,21 +473,21 @@ body {
   padding-bottom: 94;
 }
 /* Occupation */
-.flex-occupation {
+.occupation__list {
   display: flex;
 }
 
-.flex-occupation .item {
+.occupation__item {
   width: 370px;
 }
-.thumb-occupation {
+.occupation__thumb {
   position: relative;
 }
 
-.flex-occupation .item + .item {
+.occupation__item + .occupation__item {
   margin-left: 30px;
 }
-.occupation-text {
+.occupation__text {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -511,7 +508,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.second-title {
+.occupation__title {
   margin-top: 0;
   margin-bottom: 50px;
 
@@ -524,16 +521,20 @@ body {
 }
 
 /* Section team */
-.team-list {
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.team__list {
   display: flex;
   align-items: center;
 }
 
-.team-list .item + .item {
+.team__item + .team__item {
   margin-left: 30px;
 }
 
-.team-list .item {
+.team__item {
   background-color: var(--background-white);
   width: 270px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -545,7 +546,7 @@ body {
   background-color: var(--background-button);
 }
 
-.team-list .names {
+.team__names {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -556,7 +557,7 @@ body {
   text-align: center;
 }
 
-.team-list .profession {
+.team__profession {
   margin-top: 0;
   margin-bottom: 16px;
 
@@ -564,7 +565,7 @@ body {
   line-height: 1.19;
   text-align: center;
 }
-.teambox {
+.team__container {
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -573,7 +574,7 @@ body {
   height: 20px; */
 /* } */
 
-.team-link {
+.socials__link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -587,12 +588,12 @@ body {
     background-color var(--timing-process) var(--timing-function);
 }
 
-.team-link:focus,
-.team-link:hover {
+.socials__link:focus,
+.socials__link:hover {
   background-color: var(--accent-color);
   color: var(--white-color);
 }
-.icon-list {
+.socials {
   padding: 0;
   margin: 0;
   display: flex;
@@ -600,13 +601,13 @@ body {
   justify-content: center;
   list-style: none;
 }
-.team-item-icon + .team-item-icon {
+.socials__item + .socials__item {
   margin-left: 10px;
 }
 
 /* Clients */
 
-.client-link {
+.clients__link {
   width: 170px;
   height: 92px;
   border-radius: 4px;
@@ -620,13 +621,13 @@ body {
     border-color var(--timing-process) var(--timing-function);
 }
 
-.client-link:focus,
-.client-link:hover {
+.clients__link:focus,
+.clients__link:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.client-item-icon + .client-item-icon {
+.clients__item + .clients__item {
   margin-left: 30px;
 }
 /* buttons */
@@ -688,32 +689,25 @@ body {
   margin-right: auto;
 }
 
-.footer-conteiner {
+.page-footer__conteiner {
   display: flex;
-  /* padding-top: 59px;
-  padding-bottom: 59px; */
   flex-direction: column;
 }
-.footer-conteiner + .footer-conteiner {
+.page-footer__conteiner + .page-footer__conteiner {
   margin-left: 70px;
 }
-.footer-conteiner:last-child {
+.page-footer__conteiner:last-child {
   margin-left: 93px;
 }
-/* .second.footer-conteiner {
-   padding-top: 73px;
-  padding-bottom: 100px; 
-} */
+.form-footer {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-/* .form-field.footer-conteiner {
-  padding-top: 72px;
-  padding-bottom: 93px;
-} */
-
-.form-field {
+.form__conteiner {
   width: 570px;
 }
-.field-btn-container {
+.form-footer__flex {
   display: flex;
 }
 .sub-text {
@@ -721,7 +715,7 @@ body {
   margin-right: 10px;
 }
 
-.subscribe-label {
+.form-footer__label {
   display: inline-block;
   margin-bottom: 20px;
 
@@ -741,7 +735,7 @@ body {
   height: 50px;
 }
 
-.input-email {
+.form-footer__input {
   box-sizing: border-box;
   width: 358px;
   margin: 0;
@@ -754,14 +748,14 @@ body {
 
   font-size: 16px;
 }
-.input-email::placeholder {
+.form-footer__input ::placeholder {
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
 }
 
-.logo-footer {
+.logo--footer {
   display: inline-block;
   margin-bottom: 20px;
 
@@ -770,7 +764,7 @@ body {
   font-size: 26px;
   line-height: 1.17;
 }
-.footer-adress {
+.address {
   display: inline-block;
 }
 .footer-conteiner > .features-title {
@@ -778,12 +772,12 @@ body {
   margin-bottom: 20px;
 }
 
-.logo-footer,
-.text-footer {
+.logo--footer,
+.addresss__text {
   color: var(--white-color);
 }
 
-.contacts-footer a {
+.address__list a {
   color: var(--transparent-mail);
 }
 
@@ -799,24 +793,24 @@ body {
   line-height: 1.6;
 }
 
-.text-footer {
+.address__text {
   margin-top: 0;
   margin-bottom: 9px;
 }
 
-.contacts-footer a:focus,
-.contacts-footer a:hover {
+.address__link:focus,
+.address__link:hover {
   color: var(--accent-color);
 }
-.contacts-footer a {
+.address__link {
   transition: color var(--timing-process) var(--timing-function);
 }
 
-.contacts-footer .link:not(:last-child) {
+.address__item:not(:last-child) {
   margin-top: 0;
   margin-bottom: 9px;
 }
-.footer-link {
+.footer-socials__link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -830,8 +824,8 @@ body {
     background-color var(--timing-process) var(--timing-function);
 }
 
-.footer-link:focus,
-.footer-link:hover {
+.footer-socials__link:focus,
+.footer-socials__link:hover {
   background-color: var(--accent-color);
 }
 
@@ -839,7 +833,7 @@ body {
   width: 20px;
   height: 20px;
 } */
-.footer-item-icon + .footer-item-icon {
+.footer-socials__item + .footer-socials__item {
   margin-left: 10px;
 }
 
