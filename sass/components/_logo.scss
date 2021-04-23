@@ -1,0 +1,24 @@
+.logo {
+  color: getColor("black");
+  font-family: $logo-font;
+  font-weight: $font-weight-bold;
+  font-size: 26px;
+  letter-spacing: 0.03em;
+
+  line-height: 1.17;
+  text-decoration: none;
+}
+
+.page-header__logo {
+  margin-right: 93px;
+}
+.logo__text {
+  color: getColor("accent");
+}
+
+.page-footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: getColor("white");
+}

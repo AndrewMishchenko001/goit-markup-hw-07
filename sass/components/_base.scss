@@ -1,0 +1,35 @@
+body {
+  background-color: getColor("white");
+  color: getColor("title");
+  font-family: $base-font;
+  letter-spacing: 0.03em;
+  font-weight: $font-weight-normal;
+  font-size: 14px;
+  line-height: 1.14;
+  font-style: normal;
+  margin: 0px;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding: $section-padding;
+}
+
+.pictblock {
+  display: block;
+}

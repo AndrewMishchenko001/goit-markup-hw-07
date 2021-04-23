@@ -1,0 +1,35 @@
+.hero-section {
+  @extend %flex-centered;
+  background-color: getColor("background-black");
+
+  background-image: linear-gradient(
+      to right,
+      getColor("background") 0%,
+      getColor("background-second") 100%
+    ),
+    url(../images/img_5.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  max-width: 1600px;
+  height: 600px;
+  padding: 200px 0px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-section__title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  margin-bottom: 30px;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: getColor("white");
+}
+
+.hero-section__container {
+  max-width: 690px;
+  @extend %container;
+}
