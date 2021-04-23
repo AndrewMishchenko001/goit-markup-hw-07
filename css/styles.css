@@ -843,7 +843,7 @@ body {
   max-width: 100%;
 }
 
-.portfolio-title {
+.cards__title {
   margin-top: 0;
   margin-bottom: 4px;
 
@@ -854,7 +854,7 @@ body {
   letter-spacing: 0.06em;
 }
 
-.portfolio-text {
+.cards__name {
   margin-top: 0;
   margin-bottom: 0;
 
@@ -863,18 +863,18 @@ body {
   line-height: 1.88;
 }
 
-.flex-filter {
+.lots {
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
   text-align: center;
 }
 
-.flex-filter .item + .item {
+.lots__item + .lots__item {
   margin-left: 8px;
 }
 
-.flex-container {
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -883,26 +883,26 @@ body {
 }
 
 /* Можно сделать через width */
-.flex-element {
+.cards__item {
   /* height: 404px; */
   flex-basis: calc(100% / 3 - 1 * var(--card-set-gep));
   margin-right: var(--card-set-gep);
   margin-bottom: var(--card-set-gep);
   transition: box-shadow var(--timing-process) var(--timing-function);
 }
-.flex-element:nth-child(3n) {
+.cards:nth-child(3n) {
   margin-right: 0;
 }
 /* .flex-element:nth-last-child(-n + 3) {
   margin-bottom: 0;
 } */
-.flex-element:focus,
-.flex-element:hover {
+.cards:focus,
+.cards:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.product-content {
+.cards__content {
   width: 370px;
   display: block;
   padding: 20px 24px;
@@ -911,16 +911,16 @@ body {
   border-right: 1px solid var(--bordercard-grey);
 }
 
-.product-thumb {
+.cards__thumb {
   position: relative;
   overflow: hidden;
 }
 
-.flex-element:hover .product-text {
+.cards:hover .cards__text {
   transform: translateY(0);
 }
 
-.product-text {
+.cards__name {
   position: absolute;
   top: 0;
   left: 0;

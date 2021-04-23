@@ -2,7 +2,7 @@
   padding-left: 15px;
   padding-right: 15px;
 
-  width: 1200px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -38,4 +38,20 @@
   &:focus {
     color: getColor("accent");
   }
+}
+
+%timing-process-allin {
+  transition: background-color $timing-function $timing-process,
+    color $timing-function $timing-process,
+    box-shadow $timing-function $timing-process;
+}
+%timing-process-color {
+  transition: color $timing-function $timing-process;
+}
+
+%timing-process-backg {
+  transition: background-color $timing-process $timing-function;
+}
+%timing-process-shadow {
+  transition: box-shadow $timing-function $timing-process;
 }
