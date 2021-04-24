@@ -1,0 +1,25 @@
+.socials__link {
+  @extend %flex-centered;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: getColor("white");
+
+  fill: currentColor;
+  color: #afb1b8;
+  @extend %timing-process-color;
+  @extend %timing-process-backg;
+
+  &:focus,
+  &:hover {
+    background-color: getColor("accent");
+    color: getColor("white");
+  }
+}
+.socials {
+  @extend %list;
+  @extend %flex-centered;
+}
+.socials__item + .socials__item {
+  margin-left: 10px;
+}

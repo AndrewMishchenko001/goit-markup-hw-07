@@ -61,3 +61,6 @@
 %timing-process-shadow {
   transition: box-shadow $timing-function $timing-process;
 }
+%timing-process-border {
+  transition: border-color $timing-function $timing-process;
+}

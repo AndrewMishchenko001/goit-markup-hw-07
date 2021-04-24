@@ -5,21 +5,19 @@
   margin-bottom: 94px;
 }
 .features-list__container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-centered;
   width: 270px;
   height: 120px;
   background-color: #f5f4fa;
-
   margin-bottom: 30px;
 }
+
 .features-list__title {
   margin-top: 0;
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   line-height: 1.14;
-  font-size: 14px;
+  font-size: $font-weight-normal;
   text-transform: uppercase;
 }
 .features-list__text {
