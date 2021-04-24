@@ -1,0 +1,22 @@
+.button {
+  @extend %button;
+  @extend %timing-process-allin;
+  align-items: center;
+  text-align: center;
+  min-height: 50px;
+  min-width: 200px;
+  padding: 10px 32px;
+  border-radius: 4px;
+  font-weight: $font-weight-bold;
+  font-size: 16px;
+  color: getColor("white");
+  background: getColor("accent");
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+
+  &:hover,
+  &:focus {
+    @extend %timing-process-allin;
+  }
+}

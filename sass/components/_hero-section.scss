@@ -1,5 +1,5 @@
 .hero-section {
-  @extend %flex-centered;
+  display: block;
   background-color: getColor("background-black");
 
   background-image: linear-gradient(
@@ -10,6 +10,8 @@
     url(../images/img_5.jpg);
   background-position: center;
   background-repeat: no-repeat;
+  text-align: center;
+  justify-content: center;
 
   max-width: 1600px;
   height: 600px;
