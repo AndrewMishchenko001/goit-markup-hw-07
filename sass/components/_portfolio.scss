@@ -1,0 +1,115 @@
+.lots__button {
+  @extend %timing-process-allin;
+  padding: 6px 22px;
+  font-weight: $font-weight-medium;
+  font-size: 16px;
+  background-color: getColor("background-grey");
+  border-radius: 4px;
+  font-style: normal;
+  line-height: 1.6;
+  @extend %button;
+
+  &:hover,
+  &:focus {
+    @extend %timing-process-allin;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    color: getColor("white");
+    background-color: getColor("accent");
+  }
+}
+.lots {
+  @extend %list;
+  @extend %flex-centered;
+  margin-bottom: 50px;
+}
+.lots__item {
+  align-items: center;
+  margin-right: 9px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+.cards {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: calc(-1 * (#{$card-set-gep}));
+  margin-right: calc(-1 * (#{$card-set-gep}));
+}
+
+.cards__item {
+  /* height: 404px; */
+  display: block;
+  width: 370px;
+
+  flex-basis: calc(100% / 3 - 1 * (#{$card-set-gep}));
+  border-bottom: 1px solid getColor("bordercard-grey");
+  border-left: 1px solid getColor("bordercard-grey");
+  border-right: 1px solid getColor("bordercard-grey");
+  margin-right: $card-set-gep;
+  margin-bottom: $card-set-gep;
+  @extend %timing-process-shadow;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.cards__content {
+  width: 370px;
+  display: block;
+  padding: 20px 24px;
+}
+.cards__link {
+  text-decoration: none;
+  color: getColor("title");
+  @extend %timing-process-color;
+}
+.cards__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.cards__text {
+  position: absolute;
+  @extend %flex-centered;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+
+  margin: 0;
+  padding: 63px 24px;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  color: getColor("white");
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform $timing-process $timing-function;
+}
+.cards__item:hover .cards__text {
+  transform: translateY(0);
+}
+.cards__name {
+  color: getColor("primary-text");
+  font-size: 16px;
+  line-height: 1.87;
+  margin: 0;
+}
+.cards__title {
+  font-weight: $font-weight-bold;
+  font-style: normal;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  margin-bottom: 4px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}

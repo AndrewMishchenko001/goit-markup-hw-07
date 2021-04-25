@@ -1,4 +1,4 @@
-.container--flex, .main-nav__list, .contacts__link, .modal__button, .checkbox, .socials__link, .socials, .footer-socials__list, .clients, .clients__item, .clients__link, .team__list, .features-list__container, .button--footer {
+.container--flex, .main-nav__list, .contacts__link, .modal__button, .checkbox, .socials__link, .socials, .footer-socials__list, .clients, .clients__item, .clients__link, .team__list, .features-list__container, .button--footer, .lots, .cards__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,13 +18,13 @@
   margin-right: auto;
 }
 
-.button {
+.button, .lots__button {
   cursor: pointer;
   text-decoration: none;
   border: none;
 }
 
-.main-nav__list, .contacts, .socials, .footer-socials__list, .clients, .team__list, .features-list, .address__list, .occupation__list {
+.main-nav__list, .contacts, .socials, .footer-socials__list, .clients, .team__list, .features-list, .address__list, .occupation__list, .lots, .cards {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -50,14 +50,14 @@
   color: #2196f3;
 }
 
-.button, .button:hover, .button:focus {
+.button, .button:hover, .button:focus, .lots__button, .lots__button:hover, .lots__button:focus {
   -webkit-transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms, color cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms, color cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms, color cubic-bezier(0.4, 0, 0.2, 1) 250ms, box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms, color cubic-bezier(0.4, 0, 0.2, 1) 250ms, box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
-.main-nav__link, .contacts__link, .modal__button, .form-modal__label:focus-within, .form-modal__label:hover, .socials__link, .footer-socials__link, .clients__link:focus, .clients__link:hover, .address__link {
+.main-nav__link, .contacts__link, .modal__button, .form-modal__label:focus-within, .form-modal__label:hover, .socials__link, .footer-socials__link, .clients__link:focus, .clients__link:hover, .address__link, .cards__link {
   -webkit-transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
@@ -65,6 +65,13 @@
 .socials__link {
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cards__item {
+  -webkit-transition: -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .clients__link {
@@ -608,6 +615,7 @@ h3 {
 .page-footer {
   background-color: #2f303a;
   max-width: 1600px;
+  height: 252px;
   color: #ffffff;
   margin-left: auto;
   margin-right: auto;
@@ -776,5 +784,130 @@ h3 {
 
 .occupation__item:last-child {
   margin-right: 0;
+}
+
+.lots__button {
+  padding: 6px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.lots__button:hover, .lots__button:focus {
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: #2196f3;
+}
+
+.lots {
+  margin-bottom: 50px;
+}
+
+.lots__item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 9px;
+}
+
+.lots__item:last-child {
+  margin-right: 0px;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: calc(-1 * (30px));
+  margin-right: calc(-1 * (30px));
+}
+
+.cards__item {
+  /* height: 404px; */
+  display: block;
+  width: 370px;
+  -ms-flex-preferred-size: calc(100% / 3 - 1 * (30px));
+      flex-basis: calc(100% / 3 - 1 * (30px));
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.cards__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.cards__item:hover {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.cards__content {
+  width: 370px;
+  display: block;
+  padding: 20px 24px;
+}
+
+.cards__link {
+  text-decoration: none;
+  color: #212121;
+}
+
+.cards__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.cards__text {
+  position: absolute;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 63px 24px;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cards__item:hover .cards__text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.cards__name {
+  color: #757575;
+  font-size: 16px;
+  line-height: 1.87;
+  margin: 0;
+}
+
+.cards__title {
+  font-weight: 700;
+  font-style: normal;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  margin-bottom: 4px;
+  line-height: 2;
+  letter-spacing: 0.06em;
 }
 /*# sourceMappingURL=main.css.map */
