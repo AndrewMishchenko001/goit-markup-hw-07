@@ -23,3 +23,17 @@
 .socials__item + .socials__item {
   margin-left: 10px;
 }
+
+.footer-socials__list {
+  @extend %flex-centered;
+
+  @extend %list;
+}
+
+.footer-socials__link {
+  background-color: rgba(255, 255, 255, 0.1);
+  @extend %timing-process-color;
+}
+.footer-socials__item + .footer-socials__item {
+  margin-left: 10px;
+}
