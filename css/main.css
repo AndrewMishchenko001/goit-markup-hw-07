@@ -493,6 +493,10 @@ h3 {
   margin-left: 10px;
 }
 
+.footer-socials {
+  margin-right: 93px;
+}
+
 .clients__link {
   width: 170px;
   height: 92px;
@@ -605,9 +609,6 @@ h3 {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding-top: 59px;
   padding-bottom: 59px;
 }
@@ -629,6 +630,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-right: 70px;
 }
 
 .address {

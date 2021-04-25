@@ -1,7 +1,9 @@
 .page-footer > .container {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  // justify-content: space-between;
+  // лучше использовать , чем марджини - как по мне)
+  //но расстояние будет чуть отличатся от макета - но практичней
   padding-top: 59px;
   padding-bottom: 59px;
 }
@@ -18,7 +20,7 @@
 .page-footer__conteiner {
   display: flex;
   flex-direction: column;
-  // margin-right: 70px;
+  margin-right: 70px;
 }
 .address {
   font-style: normal;
@@ -65,7 +67,6 @@
 .form-footer__container {
   display: flex;
   flex-direction: column;
-  // margin-left: auto;
 
   width: 570px;
 }
