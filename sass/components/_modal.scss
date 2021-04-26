@@ -167,6 +167,8 @@
   height: 15px;
   margin-right: 8.38px;
 
+  background-size: cover;
+
   fill: currentColor;
   color: getColor("white");
   border-radius: 2px;
@@ -177,8 +179,8 @@
   color: getColor("white");
   background-image: url(../images/iconcheck.svg);
 
-  background-size: contain;
   background-origin: border-box;
+  background-position: center;
   border-color: getColor("accent");
 }
 

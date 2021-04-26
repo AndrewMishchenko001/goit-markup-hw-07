@@ -437,6 +437,7 @@ h3 {
   width: 16px;
   height: 15px;
   margin-right: 8.38px;
+  background-size: cover;
   fill: currentColor;
   color: #ffffff;
   border-radius: 2px;
@@ -448,8 +449,8 @@ h3 {
 .checkbox__input:checked + .checkbox__icon {
   color: #ffffff;
   background-image: url(../images/iconcheck.svg);
-  background-size: contain;
   background-origin: border-box;
+  background-position: center;
   border-color: #2196f3;
 }
 
@@ -703,8 +704,7 @@ h3 {
   display: inline-block;
   height: 50px;
   width: 358px;
-  margin: 0;
-  margin-right: 12px;
+  margin: 0 12px 0 0;
   padding: 15px 16px;
   border-radius: 4px;
   line-height: 1.14;
