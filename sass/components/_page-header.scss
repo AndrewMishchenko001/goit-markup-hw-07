@@ -20,6 +20,7 @@
 }
 
 .main-nav {
+  @extend %flex-centered;
   font-weight: $font-weight-medium;
   line-height: 1.14;
 }
@@ -28,8 +29,8 @@
   position: relative;
 }
 
-.main-nav__item:nth-child(n + 3) {
-  margin-left: 50px;
+.main-nav__item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .main-nav__link {

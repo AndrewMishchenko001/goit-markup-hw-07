@@ -1,4 +1,4 @@
-.container--flex, .main-nav__list, .contacts__link, .modal__button, .checkbox, .socials__link, .socials, .footer-socials__list, .clients, .clients__item, .clients__link, .team__list, .features-list__container, .button--footer, .lots, .cards__text {
+.container--flex, .main-nav__list, .main-nav, .contacts__link, .modal__button, .checkbox, .socials__link, .socials, .footer-socials__list, .clients, .clients__item, .clients__link, .team__list, .features-list__container, .button--footer, .lots, .cards__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,8 +135,8 @@ h3 {
   position: relative;
 }
 
-.main-nav__item:nth-child(n + 3) {
-  margin-left: 50px;
+.main-nav__item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .main-nav__link {
